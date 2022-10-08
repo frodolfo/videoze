@@ -24,11 +24,11 @@ final class GoogleSignInAuthenticator: ObservableObject {
         guard let firstScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
             return
         }
-
+        
         guard let firstWindow = firstScene.windows.first else {
             return
         }
-
+        
         guard let rootViewController = firstWindow.rootViewController else {
             print("There is no root view controller!")
             return

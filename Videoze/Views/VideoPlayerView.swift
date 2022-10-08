@@ -21,10 +21,9 @@ struct VideoPlayerView: View {
         player.play()
         return Group {
             if let userProfile = user?.profile {
-                VStack(spacing: 10) {
+                VStack(spacing: 4) {
                     HStack(alignment: .top) {
                         UserProfileImageView(userProfile: userProfile)
-                            .padding(.leading)
                         VStack(alignment: .leading) {
                             Text(userProfile.name)
                                 .font(.headline)
@@ -43,13 +42,14 @@ struct VideoPlayerView: View {
                     })
                     .frame(width: 400,
                            height: 300,
-                           alignment: .center)
+                           alignment: .top)
                 }
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button(NSLocalizedString("Sign Out", comment: "Sign out button"), action: signOut)
                     }
                 }
+                Spacer()
             } else {
                 Text(NSLocalizedString("Failed to get user profile!", comment: "Empty user profile text"))
             }
