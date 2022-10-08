@@ -45,11 +45,6 @@ final class AuthenticationViewModel: ObservableObject {
   func signOut() {
     authenticator.signOut()
   }
-
-  /// Disconnects the previously granted scope and logs the user out.
-  func disconnect() {
-    authenticator.disconnect()
-  }
 }
 
 extension AuthenticationViewModel {

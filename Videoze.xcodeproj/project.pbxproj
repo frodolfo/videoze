@@ -112,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				0962301E28F157A9005A5199 /* Info.plist */,
-				0962301828F15738005A5199 /* Models */,
 				0962301728F15720005A5199 /* ViewModels */,
 				0962301628F15714005A5199 /* Services */,
 				0962301428F156F4005A5199 /* Views */,
@@ -174,13 +173,6 @@
 				0962302528F15A99005A5199 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		0962301828F15738005A5199 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

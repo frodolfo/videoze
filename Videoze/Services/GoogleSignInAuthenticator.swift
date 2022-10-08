@@ -40,14 +40,4 @@ final class GoogleSignInAuthenticator: ObservableObject {
     GIDSignIn.sharedInstance.signOut()
     authViewModel.state = .signedOut
   }
-
-  /// Disconnects the previously granted scope and signs the user out.
-  func disconnect() {
-    GIDSignIn.sharedInstance.disconnect { error in
-      if let error = error {
-        print("Encountered error disconnecting scope: \(error).")
-      }
-      self.signOut()
-    }
-  }
 }

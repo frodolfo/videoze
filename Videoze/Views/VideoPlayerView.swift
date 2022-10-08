@@ -31,7 +31,7 @@ struct VideoPlayerView: View {
           }
             VideoPlayer(player: player, videoOverlay: {
                        VStack(alignment: .leading) {
-                           Text("Big BUck Bunny")
+                           Text("Big Buck Bunny")
                                .foregroundColor(Color.gray)
                                .bold()
                                .font(Font.title2)
@@ -45,7 +45,6 @@ struct VideoPlayerView: View {
         }
         .toolbar {
           ToolbarItemGroup(placement: .navigationBarTrailing) {
-            Button(NSLocalizedString("Disconnect", comment: "Disconnect button"), action: disconnect)
             Button(NSLocalizedString("Sign Out", comment: "Sign out button"), action: signOut)
           }
         }
@@ -53,10 +52,6 @@ struct VideoPlayerView: View {
         Text(NSLocalizedString("Failed to get user profile!", comment: "Empty user profile text"))
       }
     }
-  }
-
-  func disconnect() {
-    authViewModel.disconnect()
   }
 
   func signOut() {
