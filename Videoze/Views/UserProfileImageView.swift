@@ -9,22 +9,21 @@ import GoogleSignIn
 import SwiftUI
 
 struct UserProfileImageView: View {
-  @ObservedObject var userProfileImageLoader: UserProfileImageLoader
+    @ObservedObject var userProfileImageLoader: UserProfileImageLoader
 
-  init(userProfile: GIDProfileData) {
-    self.userProfileImageLoader = UserProfileImageLoader(userProfile: userProfile)
-  }
+    init(userProfile: GIDProfileData) {
+        self.userProfileImageLoader = UserProfileImageLoader(userProfile: userProfile)
+    }
 
-  var body: some View {
-      if (userProfileImageLoader.image != nil) {
-          Image(uiImage: userProfileImageLoader.image!)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 45, height: 45, alignment: .center)
-            .scaledToFit()
-            .clipShape(Circle())
-            .accessibilityLabel(Text("User profile image."))
-      }
-  }
+    var body: some View {
+        if userProfileImageLoader.image != nil {
+            Image(uiImage: userProfileImageLoader.image!)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 45, height: 45, alignment: .center)
+                .scaledToFit()
+                .clipShape(Circle())
+                .accessibilityLabel(Text("User profile image."))
+        }
+    }
 }
-
