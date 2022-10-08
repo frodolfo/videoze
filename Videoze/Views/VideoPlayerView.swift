@@ -17,6 +17,7 @@ struct VideoPlayerView: View {
   }
 
   var body: some View {
+      player.play()
     return Group {
       if let userProfile = user?.profile {
         VStack(spacing: 10) {
@@ -38,7 +39,8 @@ struct VideoPlayerView: View {
                                .padding(.all, 10)
                            Spacer()
                        }
-                   })
+                   }
+            )
             .frame(width: 400,
                    height: 300,
                    alignment: .center);
